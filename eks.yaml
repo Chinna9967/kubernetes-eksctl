@@ -1,0 +1,16 @@
+# A simple example of ClusterConfig object:
+---
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: eks-spot-cluster
+  region: us-east-1
+
+nodeGroups:
+  - name: spot
+    instanceType: m5.large
+    spot: true
+    desiredCapacity: 1
+    ssh: 
+      publicKeyName: kubernetes   #replace this with our keypair in aws
