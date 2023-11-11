@@ -7,8 +7,8 @@ metadata:
   name: eks-spot-cluster
   region: us-east-1
 
-managedNodeGroups:
-  - name: spot
+nodeGroups:
+  - name: ng-2
     instanceType: m5.large
     spot: true
     desiredCapacity: 3
