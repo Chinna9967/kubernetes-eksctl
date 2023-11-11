@@ -4,14 +4,13 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: eks-cluster
+  name: eks-spot-cluster
   region: us-east-1
 
 nodeGroups:
-  - name: ng-2
+  - name: spot
     instanceType: m5.large
-    # spot: true
+    spot: true
     desiredCapacity: 3
-    
     ssh: 
       publicKeyName: kubernetes   #replace this with our keypair in aws
