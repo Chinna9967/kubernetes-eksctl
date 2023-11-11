@@ -10,7 +10,8 @@ metadata:
 nodeGroups:
   - name: ng-2
     instanceType: m5.large
-    spot: true
+    # spot: true
     desiredCapacity: 3
+    
     ssh: 
       publicKeyName: kubernetes   #replace this with our keypair in aws
