@@ -11,6 +11,8 @@ managedNodeGroups:
   - name: spot
     instanceType: m5.large
     spot: true
+    availabilityZones:
+    - us-east-1a
     desiredCapacity: 3
     ssh: 
       publicKeyName: kubernetes   #replace this with our keypair in aws
